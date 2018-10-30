@@ -8,7 +8,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
 # added by travis gem
-[ -f /Users/ayylmao/.travis/travis.sh ] && source /Users/ayylmao/.travis/travis.sh
+[ -f /Users/brandon/.travis/travis.sh ] && source /Users/brandon/.travis/travis.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
@@ -19,4 +19,4 @@ export PATH=$PATH:$MONGO_PATH/bin
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-alias config='/usr/bin/git --git-dir=/Users/ayylmao/.cfg/ --work-tree=/Users/ayylmao'
+alias config='/usr/bin/git --git-dir=/Users/brandon/.cfg/ --work-tree=/Users/brandon'
