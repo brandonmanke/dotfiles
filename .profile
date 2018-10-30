@@ -9,9 +9,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
-# terminal "name change"
-export PS1="\h:\W brandon$ "
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
