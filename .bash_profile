@@ -11,16 +11,12 @@ export PATH
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
-##
-# Your previous /Users/ayylmao/.bash_profile file was backed up as /Users/ayylmao/.bash_profile.macports-saved_2017-02-07_at_18:22:22
-##
-
 # MacPorts Installer addition on 2017-02-07_at_18:22:22: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 #android bathing
-export PATH=${PATH}:/Users/ayylmao/Library/Android/sdk/platform-tools:/Users/ayylmao/Library/Android/sdk/tools
+export PATH=${PATH}:/Users/brandon/Library/Android/sdk/platform-tools:/Users/brandon/Library/Android/sdk/tools
 
 # SMLNJ
 export PATH=/usr/local/Cellar/smlnj/110.81/bin:$PATH
