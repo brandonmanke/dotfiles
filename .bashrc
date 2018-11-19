@@ -1,4 +1,4 @@
-export NVM_DIR="/Users/ayylmao/.nvm"
+export NVM_DIR="/Users/brandon/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Load RVM into a shell session *as a function*
