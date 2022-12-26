@@ -106,15 +106,26 @@ source ~/.bash_profile
 # added by travis gem
 [ -f /Users/brandon/.travis/travis.sh ] && source /Users/brandon/.travis/travis.sh
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#export PATH="$HOME/.rvm/gems/ruby-2.4.2/bin"
-#export PATH=/Users/brandon/.deno/bin:$PATH
+# readline (pyenv)
+export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
+# ccache
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
+
+alias lsusb="system_profiler SPUSBDataType"
+
+alias python=python3
 alias p3=python3
+alias p2=python2
 
 # add pip3 packages to path
 PYTHON_BIN_PATH="$(python3 -m site --user-base)/bin"
 PATH="$PATH:$PYTHON_BIN_PATH"
+
+PATH="$HOME/.poetry/bin:$PATH"
+
+# Haskell stack
+PATH="$HOME/.local/bin:$PATH"
 
 ############################
 #          Prompt          #
@@ -122,3 +133,19 @@ PATH="$PATH:$PYTHON_BIN_PATH"
 
 autoload -U colors && colors
 PS1="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%}:%{$fg[yellow]%}%~%{$reset_color%}$ "
+
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/node@16/bin:$PATH"
+[ -f "/Users/brandon/.ghcup/env" ] && source "/Users/brandon/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "/Users/brandon/.bun/_bun" ] && source "/Users/brandon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
