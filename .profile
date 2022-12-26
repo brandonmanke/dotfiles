@@ -2,6 +2,10 @@
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 
+# OCaml
+export OCAML_PATH=$(opam env)
+export PATH=$PATH:$OCAML_PATH
+
 #yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
@@ -13,3 +17,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # export PS1="\u@\h:\W\$ " # prompt formatting (uncomment if using bash)
 alias docker-stop="docker ps -q | xargs docker stop"
+
+export PATH="/Users/brandon/Library/Python/3.8/bin:$PATH"

@@ -26,6 +26,10 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set number " show line numbers
+set hlsearch " highlight all matches
+set showtabline=0 " disable tabline at top
+set mouse=a " enable mouse input
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -36,6 +40,7 @@ set history=500
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -249,7 +254,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Specify the behavior when switching between buffers 
 try
   set switchbuf=useopen,usetab,newtab
-  set stal=2
+  "set stal=2 " disabled this since I don't like tablines
 catch
 endtry
 
@@ -262,10 +267,12 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
+set laststatus=0 " never show it
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
+hi statusline ctermbg=black
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
@@ -328,6 +335,10 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+
+" ctrl+v & ctrl+c work on visually selected text
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

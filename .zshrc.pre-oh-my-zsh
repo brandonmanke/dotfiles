@@ -1,0 +1,21 @@
+PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH
+
+source ~/.bash_profile
+
+# added by travis gem
+[ -f /Users/brandon/.travis/travis.sh ] && source /Users/brandon/.travis/travis.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+#export PATH="$HOME/.rvm/gems/ruby-2.4.2/bin"
+#export PATH=/Users/brandon/.deno/bin:$PATH
+
+alias p3=python3
+
+############################
+#          Prompt          #
+############################
+
+autoload -U colors && colors
+PS1="%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%}:%{$fg[yellow]%}%~%{$reset_color%}$ "
+
