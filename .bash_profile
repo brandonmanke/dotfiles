@@ -10,13 +10,15 @@ export PATH="$HOME/.cargo/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#export PATH
 
 export PATH=/Users/brandon/.deno/bin:$PATH
 
 # Setting PATH for Python 3.8
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-export PATH
+#PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+#export PATH
 export PATH="/usr/local/sbin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
