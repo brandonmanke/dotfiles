@@ -1,21 +1,26 @@
-# go
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
+. "$HOME/.cargo/env"
 
-# OCaml
-export OCAML_PATH=$(opam env)
-export PATH=$PATH:$OCAML_PATH
+# ccache
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
-#yarn
-export PATH="$HOME/.yarn/bin:$PATH"
+alias lsusb="system_profiler SPUSBDataType"
 
-export PATH=/Users/brandon/.deno/bin:$PATH
+alias python=python3
+alias p3=python3
+alias p2=python2
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+export PATH="/Users/brandon/.local/bin:$PATH"
 
-# export PS1="\u@\h:\W\$ " # prompt formatting (uncomment if using bash)
-alias docker-stop="docker ps -q | xargs docker stop"
+export DENO_INSTALL="/Users/brandon/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
-export PATH="/Users/brandon/Library/Python/3.8/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brandon/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brandon/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brandon/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brandon/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Zig
+export PATH="/Users/brandon/.zig/zig-macos-aarch64-0.13.0:$PATH"
