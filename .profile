@@ -9,12 +9,14 @@ alias python=python3
 alias p3=python3
 alias p2=python2
 
+alias vi=nvim
+
 export PATH="/Users/brandon/.local/bin:$PATH"
 
 export DENO_INSTALL="/Users/brandon/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/brandon/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brandon/google-cloud-sdk/path.zsh.inc'; fi
