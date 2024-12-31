@@ -98,6 +98,8 @@ vim.g.have_nerd_font = false
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.hl = vim.highlight -- fix treesitter
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -855,6 +857,12 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+
+  {
+    'marcussimonsen/let-it-snow.nvim',
+    cmd = 'LetItSnow', -- Wait with loading until command is run
+    opts = {},
+  },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
