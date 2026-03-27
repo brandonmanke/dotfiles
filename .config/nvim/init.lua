@@ -852,6 +852,13 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+
+      -- make `mod foo`'s "foo" the same color as your regular identifiers,
+      -- with no font tweaks:
+      vim.cmd [[
+        highlight! TSNamespace guifg=NONE guibg=NONE gui=NONE
+        highlight! link TSNamespace Identifier
+      ]]
     end,
   },
 

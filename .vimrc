@@ -54,6 +54,8 @@ Plug 'https://github.com/altercation/vim-colors-solarized.git'
 
 Plug 'https://github.com/rakr/vim-one', { 'as': 'one' }
 
+Plug 'folke/tokyonight.nvim'
+
 call plug#end()
 " You can revert the settings after the call like so:
 "   filetype indent off   " Disable file-type-specific indentation

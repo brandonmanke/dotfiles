@@ -2,6 +2,28 @@ source ~/.profile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+ytmp3() {
+  local input="$1"
+  local url
+
+  if [[ "$input" == http* ]]; then
+    url="$input"
+  else
+    url="https://www.youtube.com/watch?v=${input}"
+  fi
+
+  yt-dlp --extract-audio --audio-format mp3 \
+    -o "%(title)s.%(ext)s" \
+    -f bestaudio \
+    --ffmpeg-location /opt/homebrew/bin/ffmpeg \
+    "$url"
+}
+
+# DEBUG
+#PS4='+ %D{%s.%6.} %N:%i> '
+#exec 3>&2 2>/tmp/zshstart.$$.log
+#setopt xtrace prompt_subst
+
 ############################
 #          Prompt          #
 ############################
@@ -31,3 +53,12 @@ PS1="%{$fg[blue]%}%n%{$reset_coloe%}@%{$fg[green]%}%m%{$reset_color%} %{$fg[yell
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# haskell
+[ -f "/Users/brandon/.ghcup/env" ] && . "/Users/brandon/.ghcup/env" # ghcup-env
+
+# DEBUG
+# unsetopt xtrace
+# exec 2>&3 3>&-
