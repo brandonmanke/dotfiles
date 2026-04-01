@@ -19,29 +19,19 @@ ytmp3() {
     "$url"
 }
 
-# DEBUG
-#PS4='+ %D{%s.%6.} %N:%i> '
-#exec 3>&2 2>/tmp/zshstart.$$.log
-#setopt xtrace prompt_subst
-
 ############################
 #          Prompt          #
 ############################
-
 git_branch() {
-    branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-    if [[ $branch == "" ]];
-    then
-        :
-    else
-        echo '('$branch') '
+    branch=$(git symbolic-ref --short HEAD 2> /dev/null)
+    if [[ -n $branch ]]; then
+        echo "($branch) "
     fi
 }
 
 autoload -U colors && colors
 setopt PROMPT_SUBST
-PS1="%{$fg[blue]%}%n%{$reset_coloe%}@%{$fg[green]%}%m%{$reset_color%} %{$fg[yellow]%}% %}%~ %{$fg[cyan]%}\$(git_branch)%{$reset_color%}%% "
-
+PS1="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %{$fg[yellow]%}%~ %{$fg[cyan]%}\$(git_branch)%{$reset_color%}%% "
 
 # opam configuration
 [[ ! -r /Users/brandon/.opam/opam-init/init.zsh ]] || source /Users/brandon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
@@ -59,6 +49,5 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # haskell
 [ -f "/Users/brandon/.ghcup/env" ] && . "/Users/brandon/.ghcup/env" # ghcup-env
 
-# DEBUG
-# unsetopt xtrace
-# exec 2>&3 3>&-
+# Added by Antigravity
+export PATH="/Users/brandon/.antigravity/antigravity/bin:$PATH"
